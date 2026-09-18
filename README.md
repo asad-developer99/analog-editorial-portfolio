@@ -1,4 +1,4 @@
-# Analog & Editorial Photography Portfolio
+# 3d CAMERA WEBSITE
 
 An interactive, high-fidelity 3D analog photography portfolio and digital darkroom experience. Built with WebGL, Three.js, and modern front-end techniques to showcase 35mm mechanical cameras, film anatomy, and editorial visual archives.
 
@@ -19,7 +19,8 @@ An interactive, high-fidelity 3D analog photography portfolio and digital darkro
 - **Core**: HTML5, Vanilla JavaScript, CSS3
 - **3D & WebGL**: Three.js, GLTFLoader, OrbitControls
 - **Assets**: 3D GLTF/GLB Models, High-Res 35mm Film Textures, Web Fonts
-- **Backend / Serve**: Node.js (`http`, `fs`, `path`)
+- **Local Dev Server**: Node.js (`http`, `fs`, `path`)
+- **Deployment**: Vercel (static hosting)
 
 ---
 
@@ -33,21 +34,28 @@ An interactive, high-fidelity 3D analog photography portfolio and digital darkro
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Jishnu09-siuu/analog-editorial-portfolio.git
+   git clone https://github.com/asad-developer99/analog-editorial-portfolio.git
    cd analog-editorial-portfolio
    ```
 
 2. **Start the local server:**
-   ```bash
-   npm start
-   ```
-   *Alternatively:*
    ```bash
    node server.js
    ```
 
 3. **Open in browser:**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+> Note: This project is a static site (no build step, no framework). `server.js` is provided purely as a convenience for local development — it's not required in production, since the site is deployed as static files.
+
+---
+
+## 🌐 Deployment
+
+This project deploys to [Vercel](https://vercel.com) as a static site. Key configuration:
+
+- `vercel.json` sets `outputDirectory` to the project root — no build command needed.
+- `server.js` is only used for local development and is not invoked in production.
 
 ---
 
@@ -62,9 +70,10 @@ analog-editorial-portfolio/
 ├── index.html             # Main portfolio entry point
 ├── index.css              # Custom styling & darkroom typography
 ├── index.js               # WebGL / Three.js 3D rendering & animations
-├── server.js              # Custom Node.js HTTP server (MIME & CORS support)
-├── package.json           # Project metadata & npm scripts
-└── README.md              # Project documentation
+├── server.js              # Local dev server (MIME & CORS support)
+├── vercel.json             # Vercel static deployment config
+├── package.json           # Project metadata
+└── README.md               # Project documentation
 ```
 
 ---
